@@ -20,9 +20,15 @@ while (true) {
             edit();
             break;
         case 0:
-            for ( const mhs of mahasiswa ){
-
+            if (mahasiswa.length === 0 ) {
+                console.log('Sampai jumpa!');
+                process.exit(0);
+                break;
             }
+            
+            console.log('Tabel Mahasiswa yang terdata');
+            console.table(mahasiswa);
+            console.log('Sampai jumpa!');
             process.exit(0);
             break;
         default:
